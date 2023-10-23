@@ -1,0 +1,13 @@
+create function kdvli(milbasınamaliyet float)
+returns float
+language plpgsql 
+as
+$$
+begin 
+milbasınamaliyet:=milbasınamaliyet*0.08 + milbasınamaliyet;
+return milbasınamaliyet;
+end;
+$$
+
+
+-- select ad,depozito,kdvli(10.00) from aractipi
