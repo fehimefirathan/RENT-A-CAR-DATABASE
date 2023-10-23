@@ -1,0 +1,79 @@
+CREATE TABLE Musteri (
+	Musteri_ID int primary key,
+	Ad varchar(25),
+	Cinsiyet varchar(25),
+	Adres varchar(25),
+	Yas varchar(25),
+	Mail varchar(25)	
+	);
+
+	CREATE TABLE Firma (
+	Firma_ID int primary key,
+	Ad varchar(25),
+	Adres varchar(25)	
+	);
+
+	CREATE TABLE Personel (
+	Personel_ID int primary key,
+	Ad varchar(25),
+	Cinsiyet varchar(25)	
+	);
+
+	CREATE TABLE SurucuDetayi (
+	Surucu_ID int primary key,
+	Ad varchar(25),
+	Adres varchar(25),	
+	Cinsiyet varchar(25),	
+	Yas varchar(25),	
+	Meslek varchar(25),
+	Mail varchar(25)	
+	);
+
+	CREATE TABLE SurucuOdenek (
+	Odenek_ID int primary key,
+	Gun varchar(25),
+	Odenek varchar(25)	
+	);
+
+	CREATE TABLE RezervasyonDetayı (
+	Rezervasyon_ID int primary key,
+	indirim_ID int primary key,
+	Miktar varchar(25),
+	OdemeDurumu varchar(25),	
+	GuvenceBedeli varchar(25),	
+	RezervasyonDurumu varchar(25),	
+	Okuma varchar(25),
+	Gun varchar(25),
+	SurucuSecenegi varchar(25)
+	);
+
+	CREATE TABLE Faturalandırma(
+	Fatura_ID int primary key, 
+	Liste_ID int primary key,
+	ToplamTutar varchar(25),
+	FaturaGunu varchar(25),	
+	VergiMiktarı varchar(25),	
+	İndirimTutarı varchar(25),	
+	MiktarBakiyesi varchar(25)
+	);
+
+	CREATE TABLE İmdirimDetayları(
+	İndirim_ID int primary key,
+	Alma_ID int primary key,
+	İndirimTipi varchar(25)	
+	);
+
+	CREATE TABLE AracTipi(
+	Arac_ID int primary key,
+	Ad varchar(25),
+	Depozito varchar(25),
+	MilBasınaMaliyet varchar(25),
+	Kullanıllabilirlik varchar(25)	
+	);
+
+
+	CREATE TABLE AracDetayı(
+	Arac_ID int primary key,
+	AracNumarası varchar(25),
+	SayacOkuma varchar(25)
+	);
