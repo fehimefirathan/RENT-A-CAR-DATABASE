@@ -1,0 +1,21 @@
+-- Create or Replace Function test()
+-- returns trigger
+-- as
+-- $$
+-- begin
+-- update personel set sayi=sayi+1;
+-- return new;
+-- end;
+-- $$
+-- language plpgsql;
+
+-- create trigger testtrigger
+-- after insert
+-- on musteri
+-- for each row
+-- execute procedure test();
+
+--select * from personel
+--select * from musteri
+--insert into personel(personel_id,ad) values(1074,'Semra')
+--select * from personel
